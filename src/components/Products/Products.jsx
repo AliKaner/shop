@@ -1,14 +1,14 @@
 import React from "react";
 import Grid from "@material-ui/core";
+import {Product} from "./Product";
 
-const products = [
+ const products = [
     {id: 1, name: 'Shoes' , description: 'Running shoes', price: '$5'},
     {id: 2,name: 'Mac' , description: 'iMac-pro', price: '$5'},
-
 ];
 
-
-const Products = () => {
+export const Products = () => {
+    return(
     <main>
         <Grid container justify="center" spacing={4}>
             {products.map((product) => (
@@ -18,4 +18,5 @@ const Products = () => {
             ))}
         </Grid>
     </main>
+    );
 }
