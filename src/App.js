@@ -21,7 +21,10 @@ export const App= () => {
     }
     useEffect(()=>{
         fetchProducts();
+        fetchCart();
     }, []);
+    console.log(cart);
+    console.log(<Products/>)
     return(
         <div>
             <Navbar/>
@@ -29,5 +32,5 @@ export const App= () => {
 
         </div>
     );
-    console.log(<Products/>)
+
 }
