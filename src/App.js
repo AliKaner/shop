@@ -11,10 +11,6 @@ export const App= () => {
         const { data } = await commerce.products.list();
         setProducts(data);
     }
-    const fetchCart = async () => {
-        setCart(await commerce.cart.retrieve())
-    }
-
     const handleAddToCart = async (productId, quanitity) => {
         const item = await commerce.cart.add(productId,quanitity);
         setCart(item.cart);
