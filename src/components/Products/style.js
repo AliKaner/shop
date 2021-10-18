@@ -1,4 +1,4 @@
-import {makeStyles} from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
     toolbar: theme.mixins.toolbar,
@@ -7,9 +7,7 @@ export default makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing(3),
     },
-    root:{
-        flexGrow:1,
+    root: {
+        flexGrow: 1,
     },
-
-
 }));

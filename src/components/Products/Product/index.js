@@ -17,7 +17,7 @@ export const Product = ({product, onAddToCart}) => {
                         {product.name}
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        {product.price.formatted_with_symbol}
+                        {product.price}
                     </Typography>
                 </div>
                 <Typography variant="body2" color="textSecondary">{product.description}</Typography>
