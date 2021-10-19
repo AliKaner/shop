@@ -27,7 +27,7 @@ export const App= () => {
     console.log(<Products/>)
     return(
         <div>
-            <Navbar/>
+            <Navbar totalItems={cart.total_items}/>
             <Products products={products} onAddToCart={handleAddToCart}/>
 
         </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import {AppBar, Toolbar, IconButton, Badge, MenuItem, mENU, Typography} from "@material-ui/core";
+import {AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography} from "@material-ui/core";
 import {ShoppingCart} from "@material-ui/icons";
 import useStyle from './style'
-export const Navbar = () => {
+export const Navbar = ({totalItems}) => {
     const classes = useStyle();
     return (
         <>
@@ -15,7 +15,7 @@ export const Navbar = () => {
                     <div className={classes.grow} />
                     <div className={classes.button}>
                         <IconButton aria-label="Sepeti Göster" color="inherit">
-                            <Badge badgeContent={2} color="secondary">
+                            <Badge badgeContent={totalItems} color="secondary">
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>
