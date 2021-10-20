@@ -11,7 +11,11 @@ export const App= () => {
     const fetchProducts = async () => {
         const { data } = await commerce.products.list();
         setProducts(data);
+        console.log(data);
+        console.log(await commerce);
     }
+
+
     const fetchCart = async () => {
         setCart(await commerce.cart.list());
     }
@@ -19,7 +23,6 @@ export const App= () => {
         const item= await commerce.cart.add(productId, quentitiy);
         setCart(item.cart)
     }
-
     useEffect(() =>{
         fetchProducts();
         fetchCart();
